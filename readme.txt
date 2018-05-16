@@ -218,3 +218,12 @@ delete remote
  ------------               -------------                 ----------------
  anybody else  ---fork--->  my repository   ---clone--->  local repository
  ------------               -------------                 ----------------
+
+ delete github files but remain local files
+  $ git rm --cached test.txt
+  $ git commit -m "delete file"
+  $ git push
+ delete github directory but remain local files
+  $ git rm --cached -r directory
+  $ git commit -m "delete directory“
+  $ git push
