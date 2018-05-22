@@ -2,7 +2,9 @@
 Git Bash --start at 2018-05-11 0:08
   $ git config --global user.name "Your Name"
   $ git config --global user.email "email@example.com"
-  
+Git version
+  $ git --version
+
 create a new repository,pwd --print working directory
   $ mkdir learngit
   $ cd learngit
