@@ -48,6 +48,8 @@ show the content of index
   
 diff the working directory and repository
   $ git diff HEAD -- readme.txt 
+diff both the commit history
+  $ git diff (id1) (id2)
   
 discard the working directory's alter 
 --one is that readme.txt not add to index, return to the repository version
