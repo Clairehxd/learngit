@@ -57,6 +57,8 @@ discard the working directory's alter
 --one is that readme.txt not add to index, return to the repository version
 --another is that readme.txt add to index and make another alter, return to the index version
   $ git checkout -- readme.txt
+index -> working directory
+  $ git reset
 un-index
   $ git reset HEAD readme.txt
   $ git checkout -- readme.txt
