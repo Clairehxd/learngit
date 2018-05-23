@@ -21,9 +21,10 @@ add repository files -- add repository files from staging area
 diff: add --a file once
       commit --a few files once
 
-historic record
+historic commit record
   $ git log
   $ git log --pretty=oneline
+  $ git log --graph
 return it to the previous version --HEAD^: last version; HEAD^^: last by 2 version
   $ git reset --hard HEAD^
 show version
