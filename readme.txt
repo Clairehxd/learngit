@@ -14,9 +14,9 @@ init git repository
 ls -ah --show the hidden .git
 
 create file: readme.txt --path: learngit
-add repository files --truly add files to index (local cache)
+add repository files --truly add files to staging area (local cache)
   $ git add readme.txt
-add repository files -- add repository files from index
+add repository files -- add repository files from staging area
   $ git commit -m "wrote a readme file"
 diff: add --a file once
       commit --a few files once
@@ -35,7 +35,7 @@ when u shut down ur computer, u want reset the specified version, u can
   $ git reflog
 #use the version no.
 
-working directory and index
+working directory and staging area
 .git --git's repository
 HEAD is a pointer --> master
 -----------------         -----------------repository--------------------
@@ -45,7 +45,7 @@ HEAD is a pointer --> master
 +               +         +   *           *           *             *   +
 +               +         +   -------------           ---------------   +
 -----------------         -----------------------------------------------
-show the content of index
+show the content of staging area
   $ git status
   
 diff the working directory and repository
@@ -54,12 +54,12 @@ diff both the commit history
   $ git diff (id1) (id2)
   
 discard the working directory's alter 
---one is that readme.txt not add to index, return to the repository version
---another is that readme.txt add to index and make another alter, return to the index version
+--one is that readme.txt not add to staging area, return to the repository version
+--another is that readme.txt add to staging area and make another alter, return to the staging area version
   $ git checkout -- readme.txt
-index -> working directory
+staging area -> working directory
   $ git reset
-un-index
+un-staging area
   $ git reset HEAD readme.txt
   $ git checkout -- readme.txt
 working tree clean
