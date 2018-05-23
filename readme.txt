@@ -48,10 +48,15 @@ HEAD is a pointer --> master
 show the content of staging area
   $ git status
   
-diff the working directory and repository
+compare the working directory and repository
   $ git diff HEAD -- readme.txt 
-diff both the commit history
+compare both the commit history
   $ git diff (id1) (id2)
+compare both the working directory and staging area
+  $ git diff
+compare both the staging area and commit1
+  $ git diff --staged
+
   
 discard the working directory's alter 
 --one is that readme.txt not add to staging area, return to the repository version
