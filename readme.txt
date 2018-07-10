@@ -24,7 +24,12 @@ diff: add --a file once
 historic commit record
   $ git log
   $ git log --pretty=oneline
-  $ git log --graph
+  $ git log --pretty=short
+  $ git log --graph --pretty=oneline
+
+(id) nameed stable-1
+  $ git tag stable-1 (id)
+
 return it to the previous version --HEAD^: last version; HEAD^^: last by 2 version
   $ git reset --hard HEAD^
 show version
@@ -57,6 +62,10 @@ compare both the working directory and staging area
   $ git diff
 compare both the staging area and commit1
   $ git diff --staged
+compare the file between the current branch and another branch
+  $ git diff (branch) (file)
+compare the modified files on branch
+  $ git diff (branch) --stat
 
   
 discard the working directory's alter 
@@ -93,6 +102,14 @@ https
   $ git clone https://github.com/Clairehxd/First.git
 ssh
   $ git clone git@github.com:Clairehxd/First.git
+
+myrepo and gitproject are on different machine
+  $ git clone localhost:/home/shiyanlou/gitproject test
+copy another modification from the same machine
+  $ git clone /path/to/repository
+  $ git pull /path/to/other/repository
+or 
+  $ git clone ssh://yourhost/~you/repository
 
 create a new branch
   $ git checkout -b dev
